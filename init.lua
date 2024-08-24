@@ -26,6 +26,12 @@ require("lazy").setup({
     end,
   },
 
+  {
+    'czheo/mojo.vim',
+    lazy = false
+  },
+
+
   { import = "plugins" },
 }, lazy_config)
 
