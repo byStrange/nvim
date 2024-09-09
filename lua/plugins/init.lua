@@ -1,5 +1,9 @@
 return {
   {
+    "xiyaowong/transparent.nvim",
+    lazy = false
+  },
+  { 
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save
     config = function()
@@ -42,7 +46,7 @@ return {
    'Exafunction/codeium.vim',
     event = "BufEnter",
     config = function ()
-    -- Change '<C-g>' here to any keycode you like.
+    -- Accept 
       vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
       vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true, silent = true })
       vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true, silent = true })
