@@ -3,6 +3,21 @@ return {
     "xiyaowong/transparent.nvim",
     lazy = false
   },
+  {
+    "L3MON4D3/LuaSnip",
+    -- follow latest release.
+    version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+    -- install jsregexp (optional!).
+    build = "make install_jsregexp"
+  },
+
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
+  
   { 
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save

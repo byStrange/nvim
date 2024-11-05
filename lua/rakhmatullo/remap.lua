@@ -34,27 +34,46 @@ function _G.wrap_in(before_text, after_text)
 end
 
 
-
-vim.api.nvim_set_keymap('x', '<space>\'', ":lua wrap_in('\"', '\"')<CR>", { noremap = true, silent = true, desc = "Wrap with single quotes '"})
-
+-- wrap in ''
 vim.api.nvim_set_keymap('x', '<space>q', ":lua wrap_in(\"'\", \"'\")<CR>", { noremap = true, silent = true, desc= "Wrap with double quotes \""})
 
+-- wrap in ()
 vim.api.nvim_set_keymap('x', '<space>b', ":lua wrap_in('(', ')')<CR>", { noremap = true, silent = true, desc="Wrap with ("})
 
+-- wrap in {}
 vim.api.nvim_set_keymap('x', '<space>B', ":lua wrap_in('{', '}')<CR>", { noremap = true, silent = true, desc = "Wrap with {" })
 
+-- wrap in []
 vim.api.nvim_set_keymap('x', '<space>[', ":lua wrap_in('[', ']')<CR>", { noremap = true, silent = true , desc = "Wrap with ["})
 
+-- wrap in ()
 vim.api.nvim_set_keymap('x', '<space>(', ":lua wrap_in('(', ')')<CR>", { noremap = true, silent = true, desc = "Wrap with (" })
 
+-- wrap in ""
 vim.api.nvim_set_keymap('x', '<space>"', ":lua wrap_in('\"', '\"')<CR>", { noremap = true, silent = true , desc = "Wrap with \""})
 
-vim.api.nvim_set_keymap('x', '<space>t', ":lua wrap_in('Yii::t(\"app\", \"', '\")')<CR>", { noremap = true, silent = true , desc = "for yii2 projects, wrap in translation"})
+-- wrap in Yii::t("app", '')
+vim.api.nvim_set_keymap('x', '<space>t', ":lua wrap_in('Yii::t(\"app\", ', ')')<CR>", { noremap = true, silent = true , desc = "for yii2 projects, wrap in translation"})
 
 
+-- wrap in <?= ?>
 vim.api.nvim_set_keymap('x', '<space>w', ":lua wrap_in('<?= ', ' ?>')", { noremap = true, silent = true, desc = "for php projects, wrap in <?= ?>"})
 
-vim.api.nvim_set_keymap('x', '<space>d', ":lua wrap_in('<?php ', '?>')", { noremap = true, silent = true, desc = "for php projects, wrap in <?php ?>"})
+-- wrap in <?php ?>
+vim.api.nvim_set_keymap('x', '<space>p', ":lua wrap_in('<?php ', '?>')", { noremap = true, silent = true, desc = "for php projects, wrap in <?php ?>"})
+
+-- wrap in <template></template>
+vim.api.nvim_set_keymap('x', '<space>v', ":lua wrap_in('<template>', '</template>')", { noremap = true, silent = true, desc = "for vue projects, wrap in <template></template>"})
+
+-- wrap in div
+vim.api.nvim_set_keymap('x', '<space>d', ":lua wrap_in('<div>', '</div>')", { noremap = true, silent = true, desc = "for html projects, wrap in <div></div>"})
+
+-- wrap in script setup lang ts
+vim.api.nvim_set_keymap('x', '<space>f', ":lua wrap_in('<script setup lang=\"ts\">', '</script>')", { noremap = true, silent = true, desc = "for vue projects, wrap in <script setup lang=\"ts\"></script>"})
+
+-- wrap in style 
+vim.api.nvim_set_keymap('x', '<space>m', ":lua wrap_in('<style>', '</style>')", { noremap = true, silent = true, desc = "for vue projects, wrap in <style></style>"})
+
 
 
 -- https://raw.githubusercontent.com/neoclide/coc.nvim/master/doc/coc-example-config.lua
@@ -241,4 +260,7 @@ keyset("n", "<space>j", ":<C-u>CocNext<cr>", opts)
 keyset("n", "<space>k", ":<C-u>CocPrev<cr>", opts)
 -- Resume latest coc list
 keyset("n", "<space>p", ":<C-u>CocListResume<cr>", opts)
+
+
+
 

@@ -26,6 +26,15 @@ require("lazy").setup({
     end,
   },
 
+
+  {
+      "supermaven-inc/supermaven-nvim",
+      lazy = false,
+      config = function()
+        require("supermaven-nvim").setup({})
+      end,
+  },
+
   {
     'czheo/mojo.vim',
     lazy = false
@@ -44,3 +53,20 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+vim.cmd('colorscheme tokyonight')
+
+vim.cmd('hi TelescopeNormal guibg=NONE')
+vim.cmd('hi TelescopeResultsNormal guibg=NONE')
+vim.cmd('hi TelescopePreviewNormal guibg=NONE')
+vim.cmd('hi TelescopePromptBorder guibg=NONE')
+vim.cmd('hi TelescopePromptNormal guibg=NONE')
+vim.cmd('hi TelescopePromptPrefix guibg=none')
+vim.cmd('hi TelescopeBorder guibg=NONE guifg=gray')
+vim.cmd('hi TelescopeSelection guibg=#002b36 guifg=#93a1a1')
+vim.cmd('hi StatusLine guifg=#ffffff guibg=NONE')
+vim.cmd('hi WhichKeyNormal guibg=NONE')
+vim.cmd('hi NvimTreeEndOfBuffer guibg=NONE guifg=red')
+vim.cmd('hi NvimTreeWinSeparator guibg=NONE')
+vim.cmd('hi NvimTreeNormal guibg=red')
+
