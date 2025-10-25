@@ -46,6 +46,4 @@ vim.opt.timeoutlen = 300
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
-vim.opt.incommand = 'split'
-
 vim.opt.scrolloff = 10
