@@ -22,11 +22,11 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- no mouse bs
-vim.opt.mouse = ""
+vim.opt.mouse = ''
 vim.opt.showmode = false
 
 vim.schedule(function()
-   vim.opt.clipboard = 'unnamedplus'
+  vim.opt.clipboard = 'unnamedplus'
 end)
 
 vim.opt.breakindent = true
@@ -37,7 +37,6 @@ vim.opt.undofile = true
 -- smart case!
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-
 
 vim.opt.updatetime = 250
 -- timeout pls
