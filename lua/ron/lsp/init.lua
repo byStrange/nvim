@@ -33,4 +33,5 @@ vim.lsp.enable {
   'ts_go',
   'tailwindcss',
   'emmet_language_server',
+  'intelephsense'
 }

@@ -13,6 +13,15 @@ return {
     { '<C-n>', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
   },
   opts = {
+    event_handlers = {
+
+      {
+        event = 'file_opened',
+        handler = function(file_path)
+          require('neo-tree.command').execute { action = 'close' }
+        end,
+      },
+    },
     filesystem = {
       window = {
         mappings = {

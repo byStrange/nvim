@@ -10,7 +10,7 @@ return {
   config = function()
     require('mason').setup()
     require('mason-lspconfig').setup {
-      ensure_installed = { 'lua_ls', 'vue_ls', 'tailwindcss', 'vtsls', 'emmet_language_server' },
+      ensure_installed = { 'lua_ls', 'vue_ls', 'tailwindcss', 'vtsls', 'emmet_language_server', 'intelephense' },
     }
 
     local capabilities = vim.lsp.protocol.make_client_capabilities()

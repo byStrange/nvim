@@ -46,3 +46,21 @@ vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 vim.opt.scrolloff = 10
+
+-- so important, opens the split on the right/below
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldenable = false  -- Don't fold by default
+vim.opt.foldlevel = 99      -- Keep everything open
+
+vim.api.nvim_create_autocmd("BufReadPost", {
+  pattern = "*.py",
+  callback = function()
+    vim.schedule(function()
+      vim.cmd("normal! zx")  -- Force fold recalculation for Python
+    end)
+  end,
+})

@@ -14,9 +14,15 @@ return { -- Autoformat
   },
   opts = {
     notify_on_error = false,
+    formatters = {
+      djlint = {
+        args = { '--reformat', '-' },
+      },
+    },
 
     formatters_by_ft = {
       lua = { 'stylua' },
+      htmldjango = { 'djlint' },
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --

@@ -8,3 +8,5 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 vim.keymap.set('i', 'jk', '<Esc>', { desc = 'jk to go backto normal mode' })
 vim.keymap.set('n', ';', ':', { desc = '; to command mode in normal mode' })
+vim.keymap.set('n', '<leader>l', '<cmd>LspRestart<CR>', { desc = 'Restart LSP' })
+vim.keymap.set('n', '<leader>h', vim.diagnostic.open_float, { desc = 'Open diagnostic float' })
