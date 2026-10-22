@@ -37,7 +37,7 @@ return { -- Autoformat
       javascript = { "prettierd", stop_after_first = true },
       html = { "prettierd" },
 
-      ["_"] = { "trim_whitespace" },
+      ["_"] = { "prettierd" },
     },
   },
 }

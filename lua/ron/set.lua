@@ -52,7 +52,6 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 
 vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.foldenable = false  -- Don't fold by default
 vim.opt.foldlevel = 99      -- Keep everything open
 
